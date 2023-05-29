@@ -29,6 +29,13 @@ jobs:
           
       - name: Upgrade pip
         run: pip install --upgrade pip
+        
+      - name: Upgrade setup
+        run: pip install wheel setuptools pip --upgrade
+        
+      - name: install playsound
+        run: py -m pip install playsound
+
       - name: Clone playsound repository
         run: pip install git+https://github.com/TaylorSMarks/playsound.git
       
