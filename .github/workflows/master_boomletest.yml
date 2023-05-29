@@ -30,13 +30,8 @@ jobs:
       - name: Upgrade pip
         run: pip install --upgrade pip
       - name: Clone playsound repository
-        run: git clone https://github.com/TaylorSMarks/playsound.git
-        
-      - name: Install playsound library
-        run: |
-          cd playsound
-          pip install .
-
+        run: pip install git+https://github.com/TaylorSMarks/playsound.git
+      
       - name: Install dependencies
         run: pip install -r requirements.txt
         
